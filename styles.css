@@ -1,3 +1,16 @@
+/* 
+  SECTIONS THE DOCUMENT SPLITTED IN:
+
+    - Header
+    - Welcome
+    - Partnership
+    - Apps_features
+    - Jackpot
+    - Designed
+    - Advantages
+    - Companyfeatures
+*/
+
 /* Reset browser defautls  */
 
 * { padding: 0;
@@ -10,6 +23,12 @@ html {
 }
 a {
     text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+input[type=submit] {
+    border: none;
 }
 
 /* --- Variables --- */
@@ -25,6 +44,23 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.flex-wrap-block {
+    margin-top: 50px;
+}
+.section-headline p {
+    margin: 1.3em 0;
+    font-size: 1.1rem;
+}
+.headline-center {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 650px;
+}
 .section-banner {
     flex-basis: 40%;
 }
@@ -35,16 +71,16 @@ a {
 .section-content {
     flex-basis: 46%;
 }
-.section-content > p {
-    margin: 1.5em 0;
-    font-size: 1.1rem;
-}
 
 /* -- Common styling & visual classes -- */
-
+h2 {
+    color: var(--primary-clr);
+    font-size: 2rem;
+    font-weight: 600;
+}
 .active-btn {
     display: inline-block;
-    padding: .6em 1.5em;
+    padding: .7em 2em;
     color: #fff;
     background-color: #2500f9;
     border-radius: 25px;
@@ -54,10 +90,6 @@ a {
 }
 .active-btn:hover {
     background-color: #583aff;
-}
-.heading-top {
-    color: var(--primary-clr);
-    font-size: 2rem;
 }
 .zindex-100 {
     position: relative;
@@ -131,10 +163,24 @@ nav ul a {
     font-size: 1rem;
     padding: 0 .9em;
 }
-.try-button {
+.try-btn {
     flex-shrink: 1;
     flex-grow: 1;
     text-align: center;
+}
+.try-btn a {
+    display: inline-block;
+    padding: .6em 1.5em;
+    color: #fff;
+    background-color: #2500f9;
+    border-radius: 25px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color .25s;
+}
+
+.try-btn a:hover {
+    background-color: #583aff;
 }
 
 /* --- Welcome section --- */
@@ -149,9 +195,6 @@ nav ul a {
 }
 .welcome-block {
     padding: 35px 50px;
-}
-.welcome-content {
-    flex-basis: 46%;
 }
 .ranking-block {
     width: 100%;
@@ -179,7 +222,8 @@ nav ul a {
     padding: .3em 0;
     font-size: 1.1rem;
 }
-.welcome-section h1 {
+.welcome-block h1 {
+    color: var(--primary-clr);
     font-size: 3.5rem;
     line-height: 1.25em;
     font-weight: 600;
@@ -192,7 +236,7 @@ nav ul a {
     justify-content: space-between;
 }
 .welcome-btns a:last-child {
-    margin-left: .4em;
+    margin-left: .9em;
     color: #2500f9;
     /* white-space: nowrap; */
 }
@@ -218,9 +262,9 @@ nav ul a {
     transform: scale(1.1);
 }
 
-/* --- Appsfeatures section --- */
+/* --- apps_features section --- */
 
-.appsfeatures-section {
+.apps_features-section {
     padding: 100px 0;
     position: relative;
 }
@@ -240,7 +284,7 @@ nav ul a {
     align-items: center;
     margin-bottom: 50px;
 }
-.appsfeatures-section .service-desc {
+.apps_features-section .service-desc {
     margin-left: 35px;
     margin-top: 0;
 }
@@ -257,7 +301,7 @@ nav ul a {
 /* --- Jackpot section --- */
 
 .jackpot-section {
-    padding: 0 100px;
+    padding: 0 110px;
 }
 .jackpot-block {
     padding: 0 30px;
@@ -274,7 +318,6 @@ nav ul a {
 .jackpot-features {
     padding: 80px 0;
     margin-right: 30px;
-    max-width: 300px;
     align-self: flex-start;
 }
 
@@ -297,25 +340,10 @@ nav ul a {
 /* --- Advantages section --- */
 
 .advantages-section {
-    padding-top: 120px;
+    padding: 120px 130px 0;
 }
-.advantages-headline {
-    margin: 0 auto;
-    text-align: center;
-    max-width: 650px;
-}
-.advantages-headline p {
-    margin: 1.5em 0;
-}
-.advantages-grid {
-    padding: 70px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.advantages-block {
+.advantages-section .flex-wrap-block {
     flex-basis: 30%;
-    margin-bottom: 50px;
 }
 
 /* colorizing icons' circles */
@@ -336,4 +364,85 @@ nav ul a {
 }
 #icon_support {
     background-color: #fdeee4;
+}
+
+/* --- Companyfeatures section --- */
+
+.company_features-section {
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+.company_features-section .section-headline {
+    max-width: 50ch;
+}
+.company_features-section .flex-wrap {
+    flex-basis: 58%;
+    margin-bottom: 30px;
+}
+.company_features-section .flex-wrap-block {
+    flex-basis: 45%;
+}
+
+/* --- Subscription section --- */
+
+.subscription-section {
+    padding-top: 120px;
+}
+.hide-radio {
+    display: none;
+}
+.subscription-block form {
+    max-width: 600px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: flex-start;
+}
+.label-radio {
+    cursor: pointer;
+    flex-basis: 47%;
+    box-shadow: 0 0 60px 0 rgba(0,0,0,.15);
+    border: 1px solid #fff;
+    transition: border .15s, transform .35s;
+}
+.subs-headline {
+    padding: 30px;
+    background-color: rgba(218, 236, 255, 0.5);
+}
+.subs-price {
+    font-size: 2rem;
+}
+.subs-type {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.subs-desc {
+    color: rgba(153, 156, 165, .85);
+}
+.subs-features {
+    padding: 0 20px 30px;
+}
+.subs-features ul li {
+    margin: 2em 0;
+    color: rgba(153, 156, 165, .8);
+}
+.trial-btn {
+    margin-top: 1.1em;
+    display: inline-block;
+    color: blueviolet;
+    transition: opacity .25s;
+}
+.trial-btn:hover {
+    opacity: .65;
+}
+input[type=radio]:hover + .label-radio {
+    transform: scale(1.03);
+}
+input[type=radio]:checked + .label-radio {
+    border: 2px solid rgba(0,0,0,.2);
+    transform: scale(1.03);
+}
+.subs-features input[type=submit] {
+    padding: 1em 3em;
 }
