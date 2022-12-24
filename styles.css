@@ -4,11 +4,11 @@
     - Header
     - Welcome
     - Partnership
-    - Apps_features
+    - Apps features
     - Jackpot
     - Designed
     - Advantages
-    - Companyfeatures
+    - Company features
 */
 
 /* Reset browser defautls  */
@@ -78,6 +78,9 @@ h2 {
     font-size: 2rem;
     font-weight: 600;
 }
+p {
+    color: var(--secondary-clr);
+}
 .active-btn {
     display: inline-block;
     padding: .7em 2em;
@@ -98,10 +101,12 @@ h2 {
 .service-desc {
     margin-top: 30px;
 }
-.service-desc h6 {
+.sub-heading {
+    color: var(--primary-clr);
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: .5em;
+    transition: color .25s;
 }
 .service-icon {
     width: 100px;
@@ -387,6 +392,8 @@ nav ul a {
 
 .subscription-section {
     padding-top: 120px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 .hide-radio {
     display: none;
@@ -405,6 +412,7 @@ nav ul a {
     box-shadow: 0 0 60px 0 rgba(0,0,0,.15);
     border: 1px solid #fff;
     transition: border .15s, transform .35s;
+    border-radius: 5px;
 }
 .subs-headline {
     padding: 30px;
@@ -445,4 +453,156 @@ input[type=radio]:checked + .label-radio {
 }
 .subs-features input[type=submit] {
     padding: 1em 3em;
+    cursor: pointer;
+}
+
+/* --- Testimonials section --- */
+
+.testimonials-section {
+    padding-top: 150px;
+}
+.testimonials-section .section-banner {
+    flex-basis: 57%;
+}
+.testimonials-section .section-banner img {
+    max-width: 800px;
+}
+.testimonials-section .section-content {
+    flex-basis: 40%;
+}
+.testimonial-content {
+    margin-top: 50px;
+}
+.testimonial-content p {
+    font-size: 1.1rem;
+}
+.testimonial-author {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+.author-pic {
+    max-width: 84px;
+    margin-right: 30px;
+}
+.author-pic img {
+    width: 100%;
+    border-radius: 50%;
+}
+.author-status div {
+    color: var(--primary-clr);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* --- FAQ section --- */
+
+.faq-section {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.faq-list {
+    margin: 80px auto 0;
+    max-width: 900px;
+}
+.faq-list li {
+    margin-top: 25px;
+    background-color: rgba(235, 235, 235, .45);
+    border-radius: 5px;
+}
+.faq-question {
+    padding: 5px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.faq-question:hover .sub-heading {
+    color: #21547d;
+}
+.faq-question .sub-heading {
+    margin: 0;
+}
+.faq-btn {
+    font-size: 2.1rem;
+    transition: transform .35s;
+}
+.faq-answer {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 35px;
+    transition: max-height .25s ease-in-out, padding .2s;
+}
+.faq-answer_opened {
+    max-height: 250px;
+    padding: 15px 35px;
+    transition: max-height .55s ease-out;
+}
+
+/* --- JS applying FAQ classes */
+
+.faq-btn_rotated {
+    transform: rotate(45deg);
+}
+.faq-heading_active {
+    color: #21547d;
+}
+
+/* Download section */
+
+.download-section {
+    padding-top: 100px;
+}
+.download-links img {
+    width: 100%;
+    margin-right: 10px;
+    max-width: 190px;
+    transition: transform .35s;
+}
+.download-links img:hover {
+    transform: scale(1.03);
+}
+.download-section .section-content {
+    flex: 0;
+    flex-grow: 1;
+}
+.download-section .section-banner {
+    flex-basis: 50%;
+}
+.download-section .section-banner img {
+    max-width: 2000px;
+}
+
+/* --- Footer --- */
+
+footer {
+    padding: 120px 0;
+    min-height: 300px;
+    background-color: #09142e;
+    text-align: center;
+}
+footer .logotype-block {
+    color: #fff;
+}
+.footer-nav {
+    margin: 50px auto;
+    max-width: 500px;
+}
+.footer-nav a {
+    font-size: 1.1rem;
+    color: #fff;
+}
+.footer-social li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+.footer-social i {
+    font-size: 2.3rem;
+    color: rgb(47, 47, 100);
+    transition: color .25s, transform .35s;
+}
+.footer-social a i:hover {
+    color: #fff;
+    transform: scale(1.1);
 }
