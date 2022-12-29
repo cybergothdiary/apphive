@@ -13,13 +13,16 @@
         <div class="container">
             <nav>
                 <div class="logotype-block"><span>App</span>Lab</div>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="#key_features">Key Features</a></li>
-                    <li><a href="">Pricing</a></li>
-                    <li><a href="">Testiminial</a></li>
-                    <li><a href="">FAQ</a></li>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#key_features">Key Features</a></li>
+                    <li class="nav-item"><a href="#">Pricing</a></li>
+                    <li class="nav-item"><a href="#">Testiminial</a></li>
+                    <li class="nav-item"><a href="#">FAQ</a></li>
                 </ul>
+                <div class="nav-icon">
+                    <span>☰</span>
+                </div>
                 <div class="try-btn"><a href="#" class="active-btn">Try for free</a></div>
             </nav>
         </div>
@@ -59,10 +62,9 @@
     </div>
 
     <div class="apps_features-section container">
-        <div class="apps_features-block flex-between">
+        <div class="apps_features-block flex-between flex-column flex-reverse">
             <div class="section-banner">
-                <img id="features-figure" src="./images/figures/figure-1.png">
-                <img class="zindex-100" src="./images/appsfeatures-min.png" src="Application Features">
+                <img class="zindex-100" src="./images/appsfeatures.png" src="Application Features">
             </div>
             <div class="section-content">
                 <div class="section-headline">
@@ -99,11 +101,11 @@
     </div>
 
     <div class="jackpot-section container">
-        <div class="jackpot-block flex-between">
-            <div class="jackpot-head">
+        <div class="jackpot-block flex-between flex-column">
+            <div class="jackpot-headline">
                 <h2>Smart jackpots that you may love this anytime & anywhere</h2>
             </div>
-            <div class="jackpot-head">
+            <div class="jackpot-desc">
                 <p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as AAA.</p>
             </div>
         </div>
@@ -326,7 +328,7 @@
     </div>
 
     <div class="testimonials-section container">
-        <div class="testimonials-block flex-between">
+        <div class="testimonials-block flex-between flex-column">
             <div class="section-banner">
                 <img src="./images/clients-map-min.png" alt="Our clients all over the world">
             </div>
@@ -412,7 +414,7 @@
     </div>
 
     <div class="download-section container">
-        <div class="download-block flex-between">
+        <div class="download-block flex-between flex-column">
             <div class="section-content">
                 <div class="section-headline">
                     <h2>Download our App now!</h2>
@@ -452,6 +454,7 @@
             </ul>
     </footer>
 
+    <script src="./responsive-menu.js"></script>
     <script src="./dropdown-faq.js"></script>
 </body>
 </html>

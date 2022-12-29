@@ -38,7 +38,11 @@ input[type=submit] {
 }
 
 /* --- Grid classes --- */
-
+.container {
+    width: 95%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
 .flex-between {
     display: flex;
     justify-content: space-between;
@@ -130,15 +134,7 @@ p {
 header {
     width: 100%;
     padding-top: 50px;
-    /* margin-bottom: 200px; */
-    /* position: fixed; */
-    /* z-index: 101; */
     background-color: #fff;
-}
-.container {
-    width: 95%;
-    max-width: 1180px;
-    margin: 0 auto;
 }
 nav {
     display: flex;
@@ -155,7 +151,7 @@ nav {
 .logotype-block span {
     color: #fcae61;
 }
-nav ul {
+.nav-menu {
     display: flex;
     list-style-type: none;
     flex-grow: 1;
@@ -163,7 +159,10 @@ nav ul {
     justify-content: flex-end;
     text-align: center;
 }
-nav ul a {
+.nav-icon {
+    display: none;
+}
+.nav-menu a {
     color: #000;
     font-size: 1rem;
     padding: 0 .9em;
@@ -183,7 +182,6 @@ nav ul a {
     white-space: nowrap;
     transition: background-color .25s;
 }
-
 .try-btn a:hover {
     background-color: #583aff;
 }
@@ -226,6 +224,7 @@ nav ul a {
     margin-left: .5em;
     padding: .3em 0;
     font-size: 1.1rem;
+    white-space: nowrap;
 }
 .welcome-block h1 {
     color: var(--primary-clr);
@@ -311,14 +310,12 @@ nav ul a {
 .jackpot-block {
     padding: 0 30px;
 }
-.jackpot-head:first-child {
+.jackpot-headline {
     padding-right: 30px;
-}
-.jackpot-head:last-child {
-    padding-left: 30px;
-}
-.jackpot-head:first-child {
     border-right: 2px solid rgba(0, 0, 0, .1);
+}
+.jackpot-desc {
+    padding-left: 30px;
 }
 .jackpot-features {
     padding: 80px 0;
@@ -605,4 +602,97 @@ footer .logotype-block {
 .footer-social a i:hover {
     color: #fff;
     transform: scale(1.1);
+}
+
+/* ----------------------  */
+/* Breakpoints */
+
+@media only screen and (max-width: 962px) {
+    html {
+        font-size: 85%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    html {
+        font-size: 80%;
+    }
+    .flex-column {
+        flex-direction: column;
+    }
+    .flex-reverse {
+        flex-direction: column-reverse;
+    }
+    .section-banner img {
+        /* max-width: 100px; */
+        max-width: 400px;
+    }
+
+    /* --- Header --- */
+    .nav-menu {
+        display: none;
+    }
+    .nav-menu_toggler {
+        display: block;
+        width: 100%;
+    }
+    .nav-icon {
+        display: block;
+        font-size: 2rem;
+    }
+    .try-btn {
+        display: none;
+    }
+
+    /* --- Welcome section --- */
+    .welcome-section {
+        min-height: 0;
+    }
+
+    /* --- Partnership section --- */
+    .partnership-block {
+        padding: 0;
+    }
+    .partnership-block a {
+        padding: 20px 5px;
+        text-align: center;
+    }
+    .partnership-block img {
+        width: 100%;
+    }
+
+    /* --- Jackpots section --- */
+    .jackpot-section {
+        padding: 0 10px;
+    }
+    .jackpot-block {
+        padding: 0px;
+        text-align: center;
+    }
+    .jackpot-block:first-child {
+        padding: 0 75px;
+    }
+    .service-icon {
+        margin: 0 auto;
+    }
+    .jackpot-headline {
+        padding: 5px 0;
+        margin-bottom: 10px;
+        border-bottom: 2px solid rgba(0,0,0,.1);
+        border-right: none;
+    }
+    .jackpot-desc {
+        padding: 0;
+    }
+
+    /* --- Advantages section --- */
+    .advantages-section {
+        padding: 120px 0 0;
+    }
+
+    /* --- Subscription section --- */
+    .subscription-block form {
+        max-width: 500px;
+    }
 }
