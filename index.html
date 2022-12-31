@@ -62,9 +62,9 @@
     </div>
 
     <div class="apps_features-section container">
-        <div class="apps_features-block flex-between flex-column flex-reverse">
+        <div class="apps_features-block flex-between">
             <div class="section-banner">
-                <img class="zindex-100" src="./images/appsfeatures.png" src="Application Features">
+                <img class="img-absolute_left" src="./images/appsfeatures.png" src="Application Features">
             </div>
             <div class="section-content">
                 <div class="section-headline">
@@ -266,7 +266,7 @@
                 </div>
             </div>
             <div class="section-banner">
-                <img src="./images/companyfeatures-min.png" alt="Company features">
+                <img class="img-absolute_right" src="./images/companyfeatures-min.png" alt="Company features">
             </div>
         </div>
         <a href="#" class="active-btn">See all</a>
@@ -328,18 +328,20 @@
     </div>
 
     <div class="testimonials-section container">
-        <div class="testimonials-block flex-between flex-column">
+        <div class="testimonials-block flex-between flex-column flex-reverse">
             <div class="section-banner">
                 <img src="./images/clients-map-min.png" alt="Our clients all over the world">
             </div>
             <div class="section-content">
                 <div class="section-headline">
                     <h2>Meet Client Satisfaction by using product</h2>
-                    <p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as AAA.</p>
+                    <p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as AAA:</p>
                 </div>
                 <div class="testimonial-content">
-                    <h6 class="sub-heading">User friendly & Customizable</h6>
-                    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                    <div class="testimonial-text">
+                        <h6 class="sub-heading">User friendly & Customizable</h6>
+                        <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                    </div>
                     <div class="testimonial-author">
                         <div class="author-pic">
                             <img src="./images/testimonials/client-7.jpeg" alt="Cade Harmon, CEO of AAA Company">
@@ -431,8 +433,9 @@
         </div>
     </div>
 
-    <footer>
-        <div class="logotype-block"><span>App</span>Lab</div>
+    <footer class="flex-between">
+        <div class="container">
+            <div class="logotype-block"><span>App</span>Lab</div>
             <ul class="footer-nav flex-between">
                 <li><a href="">Home</a></li>
                 <li><a href="#key_features">Key Features</a></li>
@@ -452,6 +455,7 @@
                     <a href="#"><i class="fa fa-github"></i></a>
                 </li>
             </ul>
+        </div>
     </footer>
 
     <script src="./responsive-menu.js"></script>
