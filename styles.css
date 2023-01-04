@@ -1,14 +1,19 @@
 /* 
   SECTIONS THE DOCUMENT SPLITTED IN:
 
-    - Header
-    - Welcome
-    - Partnership
-    - Apps features
-    - Jackpot
-    - Designed
-    - Advantages
-    - Company features
+    - .header
+    - .welcome-section
+    - .partnership-section
+    - .apps_features-section
+    - .jackpot-section
+    - .designed-section
+    - .advantages-section
+    - .company_features-secion
+    - .subscription-section
+    - .testimonials-section
+    - .faq-section
+    - .download-section
+    - .footer
 */
 
 /* Reset browser defautls  */
@@ -24,6 +29,7 @@ html {
 }
 a {
     text-decoration: none;
+    color: #242f51;
 }
 ul {
     list-style-type: none;
@@ -38,12 +44,10 @@ input[type=submit] {
     --secondary-clr: #616368;
 }
 
-/* --- Grid & structure --- */
+/* --- Grid & layout structure --- */
 .container {
     width: 95%;
-    /* display: block; */
     max-width: 1180px;
-    /* overflow-x: hidden; */
     margin: 0 auto;
 }
 .flex-between {
@@ -129,7 +133,7 @@ p {
 }
 
 /* --- Header Section --- */
-header {
+.header {
     width: 100%;
     padding-top: 50px;
     background-color: #fff;
@@ -157,13 +161,19 @@ nav {
     justify-content: flex-end;
     text-align: center;
 }
+.nav-menu li {
+    color: #000;
+}
 .nav-icon {
     display: none;
 }
 .nav-menu a {
-    color: #000;
     font-size: 1rem;
     padding: 0 .9em;
+    transition: opacity .25s;
+}
+.nav-menu a:hover {
+    opacity: .65;
 }
 .try-btn {
     flex-shrink: 1;
@@ -558,13 +568,13 @@ input[type=radio]:checked + .label-radio {
 }
 
 /* --- Footer --- */
-footer {
+.footer {
     padding: 120px 0;
     min-height: 300px;
     background-color: #09142e;
     text-align: center;
 }
-footer .logotype-block {
+.footer .logotype-block {
     color: #fff;
 }
 .footer-nav {
@@ -686,11 +696,8 @@ footer .logotype-block {
     .flex-column {
         flex-direction: column;
     }
-    .flex-reverse {
-        flex-direction: column-reverse;
-    }
     .section-banner img {
-        max-width: 400px;
+        max-width: 370px;
     }
 
     /* -- Common styling & visual patterns -- */
@@ -701,25 +708,57 @@ footer .logotype-block {
     }
     .img-absolute_right {
         position: absolute;
-        right: -280px; top: 50%;
+        right: -90px; top: 50%;
         transform: translateY(-50%);
     }
 
 
     /* --- Header --- */
-    header {
+    .header {
         padding-top: 35px;
     }
+    .header-pt_toggler {
+        padding-top: 170px;
+    }
     .nav-menu {
-        display: none;
+        position: fixed;
+        z-index: 9;
+        display: block;
+        padding: 10px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        transform: translateY(-200px);
+        transition: transform .7s, background-color 1s;
     }
     .nav-menu_toggler {
-        display: block;
-        width: 100%;
+        background-color: rgb(255, 246, 241); 
+        transform: translateY(0);
+        transition: transform .5s, background-color 1s;
+    }
+    .nav-item {
+        padding: .3em 0;
+    }
+    .nav-menu a {
+        font-size: 1.35rem;
+    }
+    .nav-logotype_toggler {
+        position: fixed;
+        top: 10px; left: 10px;
+        z-index: 10;
+        font-size: 2rem;
+        font-weight: 500;
+        opacity: .8;
     }
     .nav-icon {
         display: block;
         font-size: 2rem;
+    }
+    .nav-icon_toggler {
+        position: fixed;
+        top: 0; right: 8px;
+        z-index: 10;
     }
     .try-btn {
         display: none;
@@ -737,9 +776,7 @@ footer .logotype-block {
     }
 
     /* --- Appsfeatures section --- */
-    .company_features-section .section-banner img {
-        max-width: 500px;
-    }
+    
 
     /* --- Partnership section --- */
     .partnership-block {
@@ -775,6 +812,11 @@ footer .logotype-block {
 
     /* --- Advantages section --- */
     
+    /* --- Companyfeatures section --- */
+    .company_features-section .section-banner img {
+        max-width: 300px;
+    }
+
 
     /* --- Subscription section --- */
     .subscription-block form {
@@ -804,12 +846,15 @@ footer .logotype-block {
 
 @media only screen and (max-width: 576px) {
     html {
-        font-size: 55%;
+        font-size: 85%;
     }
 
     /*  --- Grid & structure --- */
+    .flex-between {
+        flex-direction: column;
+    }
     .section-banner img {
-        max-width: 170px;
+        max-width: 190px;
     }
     .flex-wrap-block {
         margin-top: 35px;
@@ -818,7 +863,7 @@ footer .logotype-block {
     /* -- Common styling & visual patterns -- */
     .active-btn {
         padding: .4em 1.3em;
-        font-size: .9em;
+        font-size: 1em;
     }
     .section-headline h2 {
         font-size: 1.5rem;
@@ -838,53 +883,74 @@ footer .logotype-block {
     }
 
     /* --- Header --- */
-    header {
+    .header {
         padding-top: 20px;
+    }
+    .header-pt_toggler {
+        padding-top: 170px;
+    }
+    .nav-logotype_toggler {
+        font-size: 1.5rem;
+    }
+    .nav-menu a {
+        font-size: 1.15rem;
     }
 
     /* --- Welcome section ---  */
+    .welcome-section {
+        min-height: 100vh;
+        background-size: 100% 400px;
+    }
     .welcome-block {
-        padding: 45px 10px;
+        padding: 40px 0px;
     }
-    .welcome-block .section-content {
-        flex-basis: 55%;
-    }
-    .welcome-block .section-banner {
-        flex-basis: 35%;
+    .welcome-block .section-banner img {
+        margin-top: 20px;
+        max-width: 25vh;
     }
     .welcome-block .section-headline p {
         margin: 1.5em 0;
     }
     .ranking-block {
-        max-width: 150px;
-        padding: 0 2em;
+        max-width: 280px;
+        padding: 0 1.3em;
     }
     .ranking-block div:last-child {
         white-space: normal;
         font-size: 1rem;
     }
     .welcome-btns a:last-child {
+        margin-left: 1.2em;
+        font-size: .9em;
         white-space: normal;
-        font-size: .8rem;
     }
 
     /* --- Partneship section --- */
     .partnership-section {
         padding-top: 50px;
     }
+    .partnership-block {
+        margin-top: 10px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
     .partnership-block a {
-        padding: 15px 12px;
+        padding: 15px 5px;
     }
-    .partnership-block img {
-        padding: 0;
+    .partnership-block a img {
+        max-width: 110px;
     }
+
 
     /* --- Appsfeatures section --- */
     .apps_features-section {
         padding: 50px 0 70px;
     }
     .img-absolute_left {
-        left: -55px;
+        position: static;
+        transform: none;
+        margin-top: 15px;
     }
     .features-block {
         margin-top: 30px;
@@ -895,24 +961,33 @@ footer .logotype-block {
 
     /* --- Jackpot section --- */
     .jackpot-section {
-        padding: 0;
+        padding: 15px 0;
     }
     .jackpot-block:first-child {
-        padding: 0 35px;
+        padding: 0;
+        margin-bottom: 15px;
     }
     .jackpot-headline h2 {
         font-size: 1.5rem;
     }
     .jackpot-features {
-        padding: 40px 5px;
+        padding: 20px 5px;
+    }
+
+    /* --- Designed section --- */
+    .designed-section .section-banner img {
+        max-width: 270px;
+    }
+    .designed-block .section-banner {
+        margin-bottom: 20px;
     }
 
     /* --- Advantages section --- */
     .advantages-section {
-        padding: 70px 10px 0;
+        padding: 70px 0px 0;
     }
     .advantages-section .flex-wrap-block {
-        flex-basis: 47%;
+        flex-basis: 45%;
     }
 
     /* --- Companyfeatures section --- */
@@ -922,11 +997,18 @@ footer .logotype-block {
     .company_features-section .flex-wrap {
         flex-basis: 80%;
     }
+    .company_features-section .flex-wrap-block {
+        margin-top: 20px;
+    }
     .company_features-section .section-banner img {
-        max-width: 200px;
+        max-width: 190px;
     }
     .img-absolute_right {
-        right: -100px;
+        position: static;
+        transform: none;
+    }
+    .flex-reverse {
+        flex-direction: column-reverse;
     }
 
     /* --- Subscription section --- */
@@ -934,14 +1016,33 @@ footer .logotype-block {
         padding-top: 70px;
     }
     .subscription-block form {
-        /* max-width: 350px; */
         margin-top: 35px;
+        max-width: 370px;
     }
     .subs-headline {
-        padding: 15px;
+        padding: 10px;
     }
     .subs-price {
-        font-size: 1.7rem;
+        font-size: 1.25rem;
+    }
+    .subs-type {
+        font-size: 1rem;
+    }
+    .subs-desc {
+        font-size: .9rem;
+    }
+    .subs-features {
+        padding: 0 16px 30px;
+    }
+    .subs-features ul li {
+        font-size: .85rem;
+    }
+    .subs-features input[type=submit] {
+        padding: 5px 15px;
+        font-size: .95rem;
+    }
+    .trial-btn {
+        font-size: .85rem;
     }
 
     /* --- Testimonials section --- */
@@ -986,6 +1087,19 @@ footer .logotype-block {
     .faq-list li {
         margin-top: 15px;
     }
+    .faq-question {
+        padding: 6px 10px;
+    }
+    .faq-btn {
+        font-size: 1.4rem;
+        margin-left: .4em;
+    }
+    .faq-question .sub-heading {
+        font-size: .95rem;
+    }
+    .faq-answer {
+        font-size: .8rem;
+    }
 
     /* --- Download secton --- */
     .download-section {
@@ -995,15 +1109,27 @@ footer .logotype-block {
         max-width: 300px;
     }
     .download-links img {
-        max-width: 80px;
+        max-width: 120px;
     }
 
     /* --- Foooter --- */
-    footer {
-        padding: 0px;
-        min-height: 200px;
+    .footer {
+        padding: 30px 0;
+        /* min-height: 300px; */
+    }
+    .footer .logotype-block {
+        font-size: 1.4rem;
     }
     .footer-nav {
-        margin: 25px 20px;
+        margin: 20px 20px;
+    }
+    .footer-nav li {
+        margin: .2em 0;
+    }
+    .footer-nav li a {
+        font-size: .9rem;
+    }
+    .footer-social li a i {
+        font-size: 1.9rem;
     }
 }

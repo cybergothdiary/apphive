@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <div class="header">
         <div class="container">
             <nav>
                 <div class="logotype-block"><span>App</span>Lab</div>
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="/">Home</a></li>
                     <li class="nav-item"><a href="#key_features">Key Features</a></li>
-                    <li class="nav-item"><a href="#">Pricing</a></li>
-                    <li class="nav-item"><a href="#">Testiminial</a></li>
-                    <li class="nav-item"><a href="#">FAQ</a></li>
+                    <li class="nav-item"><a href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a href="#faq">FAQ</a></li>
                 </ul>
                 <div class="nav-icon">
                     <span>☰</span>
@@ -26,7 +26,7 @@
                 <div class="try-btn"><a href="#" class="active-btn">Try for free</a></div>
             </nav>
         </div>
-    </header>
+    </div>
     
     <div class="welcome-section flex-between">
         <div class="welcome-block container flex-between">
@@ -62,7 +62,7 @@
     </div>
 
     <div class="apps_features-section container">
-        <div class="apps_features-block flex-between">
+        <div class="apps_features-block flex-between flex-reverse">
             <div class="section-banner">
                 <img class="img-absolute_left" src="./images/appsfeatures.png" src="Application Features">
             </div>
@@ -226,7 +226,7 @@
             <p>The rise of mobile devices transforms the way we consume infomation entirely.</p>
         </div>
 
-        <div class="company_features-block flex-between">
+        <div class="company_features-block flex-between flex-reverse">
             <div class="flex-wrap">
                 <div class="flex-wrap-block">
                     <div id="icon_development" class="service-icon">
@@ -274,7 +274,7 @@
 
     <div class="subscription-section">
         <div class="container">
-            <div class="section-headline headline-center">
+            <div id="pricing" class="section-headline headline-center">
                 <h2>Get awesome features, without extra charges!</h2>
                 <p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as AAA.</p>
             </div>
@@ -327,7 +327,7 @@
         </div>
     </div>
 
-    <div class="testimonials-section container">
+    <div id="testimonials" class="testimonials-section container">
         <div class="testimonials-block flex-between flex-column flex-reverse">
             <div class="section-banner">
                 <img src="./images/clients-map-min.png" alt="Our clients all over the world">
@@ -358,7 +358,7 @@
 
     <div class="faq-section">
         <div class="container">
-            <div class="section-headline headline-center">
+            <div id="faq" class="section-headline headline-center">
                 <h2>Frequently asked questions</h2>
                 <p>The rise of mobile devices transforms the way we consume information entirely and the world's most elevant channels such as AAA.</p>
             </div>
@@ -412,7 +412,6 @@
                 </li>
             </ul>
         </div>
-        
     </div>
 
     <div class="download-section container">
@@ -433,15 +432,15 @@
         </div>
     </div>
 
-    <footer class="flex-between">
+    <div class="footer flex-between">
         <div class="container">
             <div class="logotype-block"><span>App</span>Lab</div>
             <ul class="footer-nav flex-between">
-                <li><a href="">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="#key_features">Key Features</a></li>
-                <li><a href="">Pricing</a></li>
-                <li><a href="">Testiminial</a></li>
-                <li><a href="">FAQ</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
 
             <ul class="footer-social">
@@ -456,7 +455,7 @@
                 </li>
             </ul>
         </div>
-    </footer>
+    </div>
 
     <script src="./responsive-menu.js"></script>
     <script src="./dropdown-faq.js"></script>
